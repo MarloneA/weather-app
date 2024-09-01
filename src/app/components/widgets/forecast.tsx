@@ -7,20 +7,19 @@ import { dateToString } from "../../lib/utils";
 import { CityDataContext } from "../../context/CityDataContext";
 
 export default function ForeCast() {
-  const { cityData, units } = useContext(CityDataContext);
+  const { cityData, setCityData, units } = useContext(CityDataContext);
 
   return (
     <div className="flex flex-row">
-      {cityData?.daily?.slice(0, 3).map((day, index) => (
-        <div
+      {cityData?.daily?.slice(1, 6).map((day, index) => (
+        <button
           key={index}
-          className="card bg-[#ffffff2e] m-2 flex justify-center items-center text-white"
+          className="card bg-[#6890c069] hover:bg-[#688fc096] cursor-pointer m-2 flex justify-center items-center text-white"
+          onClick={() => setCityData()}
         >
-          <div className="card-body">{dateToString(day.dt)}</div>
-          <div className="card-body">
-            <Weather condition={day?.weather[0]?.main} />
-          </div>
-          <div className="flex flex-row align-baseline card-body text-2xl">
+          <div className="card-body font-thin">{dateToString(day.dt)}</div>
+          <Weather condition={day?.weather[0]?.main} />
+          <div className="flex flex-row align-baseline card-footer text-2xl font-extralight">
             {day?.temp?.min} - {day?.temp?.max}
             {day?.temp?.min && (
               <span className=" flex flex-col">
@@ -30,8 +29,11 @@ export default function ForeCast() {
               </span>
             )}
           </div>
-          <div className="card-body text-center text-2xl">{day?.summary}</div>
-        </div>
+          <div className="text-left text-xl font-thin">
+            {day?.weather[0].main}
+          </div>
+          <div className="card-body text-center text-sm ">{day?.summary}</div>
+        </button>
       ))}
     </div>
   );

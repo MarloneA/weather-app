@@ -1,7 +1,6 @@
 "use client";
 
 import React, { createContext, useState, ReactNode, useEffect } from "react";
-import { getCityData } from "../actions/getCityData";
 
 type UnitType = "metric" | "imperial";
 

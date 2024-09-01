@@ -38,7 +38,7 @@ export default function SearchCity() {
       <form onSubmit={handleSearch} className="flex">
         <Input
           type="text"
-          placeholder="Search city ..."
+          placeholder="Search for location ..."
           value={city}
           onChange={(e) => setCity(e.target.value)}
         />

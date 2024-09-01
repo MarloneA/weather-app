@@ -8,7 +8,7 @@ export default function Button({
   props: any;
 }) {
   return (
-    <button className="btn btn-primary" {...props}>
+    <button className="btn btn-primary bg-[#688fc096]" {...props}>
       {children}
     </button>
   );

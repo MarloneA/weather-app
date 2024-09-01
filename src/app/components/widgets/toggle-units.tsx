@@ -37,7 +37,7 @@ export default function ToggleUnits() {
         value="metric"
         checked={units === "metric"}
         onChange={handleUnitChange}
-        className="btn"
+        className="btn !bg-[#688fc096]"
         data-content="&deg;C"
       />
       <input
@@ -46,7 +46,7 @@ export default function ToggleUnits() {
         value="imperial"
         checked={units === "imperial"}
         onChange={handleUnitChange}
-        className="btn"
+        className="btn !bg-[#688fc096]"
         data-content="&deg;F"
       />
       {error && <p style={{ color: "red" }}>{error}</p>}
