@@ -1,9 +1,11 @@
-import Button from "./components/_ui/button";
+import Aside from "./components/templates/aside";
+import Main from "./components/templates/main";
 
 export default function Home() {
   return (
-    <main className="flex flex-row w-screen h-screen">
-      <Button>Hello World</Button>
+    <main className="bg-[url('/image/clouds.jpg')] flex flex-row w-screen h-screen">
+      <Aside />
+      <Main />
     </main>
   );
 }
