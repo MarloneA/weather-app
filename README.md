@@ -21,3 +21,9 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+here's a preview of the app
+
+<div align="center">
+    <img src="./public/screen.png"</img> 
+</div>
